@@ -9,6 +9,7 @@ module Konacha
           options = Konacha::Engine.config.konacha
           environment = Sprockets::Environment.new
           environment.append_path File.join(options.app_root, options.assets_path, 'javascripts')
+          environment.append_path File.join(options.app_root, 'vendor', 'assets', 'javascripts')
           environment.append_path File.join(options.app_root, options.spec_dir)
           environment.append_path File.join($konacha_lib_path, 'assets', 'javascripts')
           environment.append_path File.join($konacha_lib_path, 'assets', 'stylesheets')
